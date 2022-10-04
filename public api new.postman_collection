@@ -1,0 +1,526 @@
+{
+	"info": {
+		"_postman_id": "d1e8d418-0c35-4caf-a197-cabc7fef0ce3",
+		"name": "public api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6505056"
+	},
+	"item": [
+		{
+			"name": "get all entries",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get all entries)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Response time is less than 200ms(get all entries)\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "Science & Math",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on title",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based on title)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?title=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1"
+						},
+						{
+							"key": "description",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on description",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based on description)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?description=holidays",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based on auth)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?auth=apiKey",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": "apiKey"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on https",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based on https)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?https=true",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries with invalid https",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries with invalid https)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?https=www",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": "www"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on cors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based on cors)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?cors=yes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "yes"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on invalid cors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries with invalid cors)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?cors=ok",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": "ok"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get entries based on category",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200(get entries based category)\", function () {\r",
+							"    \tpm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.publicapis.org/entries?category=animals",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "holidays",
+							"disabled": true
+						},
+						{
+							"key": "auth",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "https",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "cors",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "animals"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
